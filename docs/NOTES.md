@@ -752,3 +752,11 @@ NetworkPolicy debugging session)
 - terraform state list → kind_cluster.devsecops tracked in state
 - terraform destroy → deleted cluster cleanly
 - Key concept: IaC = infrastructure reproducible from code, full lifecycle management
+
+## Module 7: GitHub Actions CI ✅
+- Created .github/workflows/ci.yml
+- Triggers on every push to main
+- Builds Docker image with root context, Dockerfile in ./docker/
+- Pushes to DockerHub as shambhavi004/devsecops-api:<git-sha>
+- Secrets: DOCKERHUB_USERNAME, DOCKERHUB_TOKEN stored in GitHub Actions secrets
+- Key concept: CI = every push automatically tested and built, no manual docker build needed
