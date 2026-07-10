@@ -1,0 +1,14 @@
+# Terraform
+terraform/.terraform/
+terraform/**/.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+terraform/**/devsecops-platform-tf-config
+
+# Kubernetes secrets
+*.key
+*.pem
+
+# OS
+.DS_Store
