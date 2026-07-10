@@ -767,3 +767,10 @@ NetworkPolicy debugging session)
 - Trivy: scans Docker image for CRITICAL/HIGH CVEs
 - Pipeline order: gitleaks → build-and-push → trivy (checkov runs in parallel)
 - Key concept: shift-left security = catch vulnerabilities before production
+
+## Module 9: ArgoCD & GitOps ✅
+- Installed ArgoCD v3.4.5 in argocd namespace
+- Created gitops/argocd-app.yaml pointing to helm/devsecops-api on GitHub
+- ArgoCD auto-synced and deployed 2 pods from GitHub → cluster
+- syncPolicy: automated with prune=true, selfHeal=true
+- Key concept: GitOps = Git is single source of truth, ArgoCD reconciles cluster state
