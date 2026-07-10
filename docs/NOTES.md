@@ -781,3 +781,10 @@ NetworkPolicy debugging session)
 - Loki reachable from Grafana: confirmed via wget http://loki.monitoring.svc.cluster.local:3100/ready
 - Grafana datasource URL: http://loki.monitoring.svc.cluster.local:3100
 - Key concept: Promtail ships logs from every pod → Loki stores → Grafana queries
+
+## Module 13: OpenTelemetry ✅
+- Installed opentelemetry-collector via Helm in monitoring namespace
+- Mode: deployment, image: otel/opentelemetry-collector-contrib
+- Receivers: OTLP gRPC (4317) + HTTP (4318)
+- Key concept: OTel collects traces/metrics/logs from apps → forwards to backends (Prometheus, Loki, Jaeger)
+- Full observability stack: Prometheus (metrics) + Loki (logs) + OTel (traces)
