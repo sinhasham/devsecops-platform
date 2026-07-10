@@ -774,3 +774,10 @@ NetworkPolicy debugging session)
 - ArgoCD auto-synced and deployed 2 pods from GitHub → cluster
 - syncPolicy: automated with prune=true, selfHeal=true
 - Key concept: GitOps = Git is single source of truth, ArgoCD reconciles cluster state
+
+## Module 12: Loki ✅
+- Installed loki-stack via Helm in monitoring namespace
+- Components: loki-0 (storage/query) + promtail (log collector on every node)
+- Loki reachable from Grafana: confirmed via wget http://loki.monitoring.svc.cluster.local:3100/ready
+- Grafana datasource URL: http://loki.monitoring.svc.cluster.local:3100
+- Key concept: Promtail ships logs from every pod → Loki stores → Grafana queries
