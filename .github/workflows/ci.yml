@@ -23,6 +23,7 @@ jobs:
     - name: Build and Push Docker image
       uses: docker/build-push-action@v5
       with:
-        context: ./docker
+        context: .
+        file: ./docker/Dockerfile
         push: true
         tags: shambhavi004/devsecops-api:${{ github.sha }}
