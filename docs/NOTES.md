@@ -760,3 +760,10 @@ NetworkPolicy debugging session)
 - Pushes to DockerHub as shambhavi004/devsecops-api:<git-sha>
 - Secrets: DOCKERHUB_USERNAME, DOCKERHUB_TOKEN stored in GitHub Actions secrets
 - Key concept: CI = every push automatically tested and built, no manual docker build needed
+
+## Module 8: DevSecOps Tools ✅
+- Gitleaks: scans git history for leaked secrets
+- Checkov: scans Terraform/K8s YAML for misconfigurations (soft_fail=true)
+- Trivy: scans Docker image for CRITICAL/HIGH CVEs
+- Pipeline order: gitleaks → build-and-push → trivy (checkov runs in parallel)
+- Key concept: shift-left security = catch vulnerabilities before production
